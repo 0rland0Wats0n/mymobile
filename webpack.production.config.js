@@ -17,12 +17,19 @@ var config = {
     loaders: [{
       test: /\.js$/,
       loader: 'babel-loader',
+      query: {
+        presets: ['react', 'es2015', 'stage-1']
+      },
       exclude: [nodeModulesPath]
-    },{
+    },
+    {
       test: /\.css$/,
       loader: 'style!css'
     }]
-  }
+  }.
+  resolve: {
+    extensions: ['', '.js', '.jsx']
+  },
 };
 
 module.exports = config;
