@@ -26,7 +26,7 @@ var config = {
       test: /\.css$/,
       loader: 'style!css'
     }]
-  }.
+  },
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
