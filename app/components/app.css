@@ -17,3 +17,57 @@ a:focus,
 a:visited {
   color: currentColor;
 }
+
+.ptc-container {
+  width: 100%;
+  padding: 20px;
+}
+
+.ptc-container.ptc-container--full-page {
+  position: absolute;
+  min-height: 100%;
+}
+
+/*
+  DEFAULT FORM STYLES
+*/
+.ptc-form--heading {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 20px auto 40px;
+}
+.ptc-form--input {
+  font-size: 2em;
+  padding: 10px;
+  width: 100%;
+  margin: 0 auto 10px;
+  font-weight: lighter;
+  outline: none;
+  border: 1px solid #0d0d0d;
+  transiton: border-color 0.3s ease-out;
+}
+.ptc-form--input:focus,
+.ptc-form--input:active {
+  border-color: #53cfd7;
+}
+
+.ptc-form--submit-button {
+  display: block;
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: #37898f;
+  padding: 15px 30px;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  margin: 20px auto;
+  transition: background-color 0.3s ease-out;
+}
+
+.ptc-form--submit-button:hover,
+.ptc-form--submit-button:focus {
+  background-color: #53cfd7;
+  text-decoration: none;
+}

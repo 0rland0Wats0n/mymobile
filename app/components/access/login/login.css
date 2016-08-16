@@ -1,0 +1,13 @@
+.ptc-container--full-page {
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ptc-form--login-form {
+  width: 500px;
+  max-width: 100%;
+  background-color: white;
+  padding: 25px 30px;
+}

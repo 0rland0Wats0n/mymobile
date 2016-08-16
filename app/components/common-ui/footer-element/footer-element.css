@@ -27,3 +27,9 @@
 .footer-cta .button {
   margin-top: 50px;
 }
+
+.footer-cta:nth-child(2) {
+  border: none;
+  border-left: 1px solid #f2f2f2;
+  border-right: 1px solid #f2f2f2;
+}
