@@ -14,7 +14,8 @@ var config = {
     filename: 'bundle.js'
   },
   module: {
-    loaders: [{
+    loaders: [
+    {
       test: /\.js$/,
       loader: 'babel-loader',
       query: {
@@ -24,12 +25,28 @@ var config = {
     },
     {
       test: /\.css$/,
-      loader: 'style!css'
-    }]
+      loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+    }
+
+    ]
   },
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
+  plugins: [
+    new Webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+        API_KEY: JSON.stringify(process.env.API_KEY),
+        AUTH_DOMAIN: JSON.stringify(process.env.AUTH_DOMAIN),
+        DATABASE_URL: JSON.stringify(process.env.DATABASE_URL),
+        STORAGE_BUCKET: JSON.stringify(process.env.STORAGE_BUCKET),
+      }
+    }),
+    new ExtractTextPlugin('style.css', {
+      allChunks: true
+    })
+  ]
 };
 
 module.exports = config;
