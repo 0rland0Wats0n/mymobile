@@ -1,8 +1,8 @@
-require('./app.css');
+require('./home.css');
 import React from 'react';
 
-import Footer from './common-ui/footer/index';
-import LinkButton from './common-ui/button-link/index';
+import Footer from '../common-ui/footer/index';
+import LinkButton from '../common-ui/button-link/index';
 
 export default () => {
   return (
