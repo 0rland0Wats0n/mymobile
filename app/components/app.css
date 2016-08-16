@@ -36,6 +36,19 @@ a:visited {
   text-transform: uppercase;
   margin: 20px auto 40px;
 }
+.ptc-form--heading-logo {
+  width: 72px;
+  height: 72px;
+  margin-right: 20px;
+}
+.ptc-form--heading-text {
+  margin: 0;
+}
+.ptc-form--heading-logo,
+.ptc-form--heading-text {
+  display: inline-block;
+  vertical-align: middle;
+}
 .ptc-form--input {
   font-size: 2em;
   padding: 10px;

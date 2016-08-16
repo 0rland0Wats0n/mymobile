@@ -4,8 +4,8 @@
   min-height: 250px;
 }
 
+.footer-cta:first-child,
 .footer-cta:nth-child(2) {
-  border-top: 1px solid #f2f2f2;
   border-bottom: 1px solid #f2f2f2;
 }
 
@@ -28,8 +28,14 @@
   margin-top: 50px;
 }
 
-.footer-cta:nth-child(2) {
-  border: none;
-  border-left: 1px solid #f2f2f2;
-  border-right: 1px solid #f2f2f2;
+@media all and (min-width: 990px) {
+  .footer-cta:first-child {
+    border: none;
+  }
+
+  .footer-cta:nth-child(2) {
+    border: none;
+    border-left: 1px solid #f2f2f2;
+    border-right: 1px solid #f2f2f2;
+  }
 }

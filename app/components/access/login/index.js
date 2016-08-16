@@ -20,11 +20,16 @@ class Login extends Component {
     return (
       <div className="ptc-container ptc-container--full-page">
         <form className="ptc-form ptc-form--login-form">
-            <h1 className="ptc-form--heading">Login</h1>
-            <input className="ptc-form--input" />
-            <input className="ptc-form--input" />
+            <div className="ptc-form--heading">
+              <Link to='/'>
+                <img className="ptc-form--heading-logo" src="/images/logo-small-round.png" />
+              </Link>
+              <h1 className="ptc-form--heading-text">Login</h1>
+            </div>
+            <input className="ptc-form--input" type="email" placeholder="Email"/>
+            <input className="ptc-form--input" type="password" placeholder="Password" />
             <button type="submit" className="ptc-form--submit-button">Login</button>
-            <div class="ptc-form--additional-info">
+            <div className="ptc-form--additional-info">
               <p>Don't have an account, <Link to="/signup">sign up here</Link>.</p>
             </div>
         </form>
