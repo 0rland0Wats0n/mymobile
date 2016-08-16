@@ -1,6 +1,8 @@
+require('./footer-element.css');
+
 import React from 'react';
 
-import LinkButton from './button-link';
+import LinkButton from '../button-link/index';
 
 export default (props) => {
   return (

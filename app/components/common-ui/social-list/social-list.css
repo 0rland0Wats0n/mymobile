@@ -1,0 +1,17 @@
+/*
+  SOCIAL LIST
+*/
+.social-list {
+  padding: 10px;
+  list-style: none;
+  text-align: center;
+}
+
+.social-list--item {
+  display: inline-block;
+  padding: 5px;
+}
+
+.social-list--facebook .social-list--icon { color: #3b5998; }
+.social-list--twitter .social-list--icon { color: #55acee; }
+.social-list--linkedin .social-list--icon { color: #007bb5; }

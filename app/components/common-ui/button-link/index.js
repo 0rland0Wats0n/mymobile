@@ -1,3 +1,5 @@
+require('./button-link.css');
+
 import React from 'react';
 import { Link } from 'react-router';
 

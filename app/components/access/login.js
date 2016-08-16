@@ -16,7 +16,9 @@ class Login extends Component {
   }
   render() {
     return (
-      <div>Login</div>
+      <div className="full-page-container">
+        
+      </div>
     )
   }
 }

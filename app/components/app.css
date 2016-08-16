@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 16px;
+}
+
+a {
+  color: currentColor;
+  text-decoration: underline;
+}
+
+a:hover,
+a:focus,
+a:visited {
+  color: currentColor;
+}
