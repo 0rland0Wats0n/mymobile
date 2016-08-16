@@ -1,7 +1,9 @@
+require('./footer.css');
+
 import React from 'react';
 
-import FooterElement from './footer-element';
-import SocialList from './social-list';
+import FooterElement from '../footer-element/index';
+import SocialList from '../social-list/index';
 
 export default () => {
   return (

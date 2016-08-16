@@ -1,14 +1,8 @@
-var express = require('express');
-var Firebase = require('firebase');
-var httpProxy = require('http-proxy');
+require('dotenv').config();
 
-//initialize Firebase
-Firebase.initializeApp({
-  apiKey: process.env.API_KEY,
-  authDomain: process.env.AUTH_DOMAIN,
-  databaseURL: process.env.DATABASE_URL,
-  storageBucket: process.env.STORAGE_BUCKET
-});
+var express = require('express');
+var path = require('path')
+var httpProxy = require('http-proxy');
 
 var proxy = httpProxy.createProxyServer();
 var app = express();
@@ -17,14 +11,14 @@ var isProduction = process.env.NODE_ENV === 'production';
 var port = isProduction ? process.env.PORT : 3001;
 
 //point to static assests
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
 //only run workflow when not in production
 if(!isProduction) {
   var bundle = require('./server/bundle.js');
   bundle();
 
-  //all requests to localhost:3000/build is proxied
+  //all requests to localhost:3001/build is proxied
   //to webpack-dev-server
   app.all('/build/*', function(req, res) {
     proxy.web(req, res, {

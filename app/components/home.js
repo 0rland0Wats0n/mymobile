@@ -1,9 +1,14 @@
+require('./app.css');
 import React from 'react';
 
-import LinkButton from './common-ui/button-link';
+import Footer from './common-ui/footer/index';
+import LinkButton from './common-ui/button-link/index';
 
 export default () => {
   return (
-    <LinkButton link="/" text="Home" />
+    <div>
+      <LinkButton link="/login" text="Home" />
+      <Footer />
+    </div>
   )
 }

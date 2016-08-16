@@ -42,7 +42,7 @@ module.exports = function() {
 
   //fire up dev server
   bundler.listen(8080, 'localhost', function() {
-    console.log('Bundling project, please wait...');
+    console.log('Bundling project for ' + process.env.NODE_ENV + ', please wait...');
   });
 
 };
