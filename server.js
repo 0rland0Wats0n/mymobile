@@ -1,5 +1,14 @@
 var express = require('express');
+var Firebase = require('firebase');
 var httpProxy = require('http-proxy');
+
+//initialize Firebase
+Firebase.initializeApp({
+  apiKey: process.env.API_KEY,
+  authDomain: process.env.AUTH_DOMAIN,
+  databaseURL: process.env.DATABASE_URL,
+  storageBucket: process.env.STORAGE_BUCKET
+});
 
 var proxy = httpProxy.createProxyServer();
 var app = express();
