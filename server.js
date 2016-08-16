@@ -1,6 +1,7 @@
 require('dotenv').config();
 
 var express = require('express');
+var path = require('path')
 var httpProxy = require('http-proxy');
 
 var proxy = httpProxy.createProxyServer();
@@ -10,14 +11,14 @@ var isProduction = process.env.NODE_ENV === 'production';
 var port = isProduction ? process.env.PORT : 3001;
 
 //point to static assests
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
 //only run workflow when not in production
 if(!isProduction) {
   var bundle = require('./server/bundle.js');
   bundle();
 
-  //all requests to localhost:3000/build is proxied
+  //all requests to localhost:3001/build is proxied
   //to webpack-dev-server
   app.all('/build/*', function(req, res) {
     proxy.web(req, res, {

@@ -1,18 +1,9 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router';
-import { connect } from 'react-redux';
+import React from 'react';
 
-import { isLoggedIn } from '../actions/index';
+import LinkButton from './common-ui/button-link';
 
-class Login extends Component {
-  componentWillMount() {
-    this.props.isLoggedIn();
-  }
-  render() {
-    return (
-      <div>Login</div>
-    )
-  }
+export default () => {
+  return (
+    <LinkButton link="/login" text="Home" />
+  )
 }
-
-export default connect(null, { isLoggedIn })(Login);
