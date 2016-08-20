@@ -1,14 +1,15 @@
 require('./home.css');
 import React from 'react';
 
+import PhotoList from '../photo-list/index';
 import Footer from '../common-ui/footer/index';
 import Nav from '../common-ui/nav/index';
-import LinkButton from '../common-ui/button-link/index';
 
 export default () => {
   return (
     <div>
       <Nav />
+      <PhotoList />
       <Footer />
     </div>
   )

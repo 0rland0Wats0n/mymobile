@@ -7,7 +7,7 @@ import SocialList from '../social-list/index';
 export default () => {
   return (
     <footer className="container-fluid">
-      <SocialList className="pull-right" />
+      <SocialList />
     </footer>
   )
 }

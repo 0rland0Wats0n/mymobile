@@ -1,0 +1,32 @@
+.mymobile-photo-list {
+  position: relative;
+  padding: 10px 30px;
+  margin: 95px 0 45px;;
+  max-width: 100%;
+}
+
+.mymobile-photo-list--image {
+  width: 100%;
+}
+
+.grid-item {
+  width: 100%;
+}
+
+@media all and (min-width: 600px) {
+  .grid-item {
+    width: 50%;
+  }
+}
+
+@media all and (min-width: 800px) {
+  .grid-item {
+    width: 33.33%;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .grid-item {
+    width: 25%;
+  }
+}
