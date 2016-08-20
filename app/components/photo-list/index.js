@@ -1,6 +1,8 @@
 require('./photo-list.css');
 
 import _ from 'underscore';
+import $ from 'jquery';
+
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
@@ -10,10 +12,16 @@ class PhotoList extends Component {
   componentWillMount() {
     this.props.getImages();
   };
+  componentDidMount() {
+    imagesLoaded($('.grid'), function() {
+      this.$grid =  new Isotope('.grid', {
+        itemSelector: '.grid-item'
+      });
+    });
+  }
   render() {
     return (
-      <div className="mymobile-photo-list grid"
-          data-isotope='{"itemSelector": ".grid-item"}'>
+      <div className="mymobile-photo-list grid">
         {this.renderImages()}
       </div>
     )
@@ -23,7 +31,7 @@ class PhotoList extends Component {
       return this.props.images.images.map((image) => {
         return (
           <div className="grid-item" key={image._id}>
-            <img className="mymobile-photo-list--image " src={image.image.url} />
+            <img className="mymobile-photo-list--image" src={image.image.url}/>
           </div>
         )
       });

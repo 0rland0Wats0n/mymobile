@@ -2,6 +2,7 @@
   position: relative;
   padding: 10px 30px;
   margin: 95px 0 45px;;
+  max-width: 100%;
 }
 
 .mymobile-photo-list--image {
