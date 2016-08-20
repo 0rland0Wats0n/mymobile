@@ -2,16 +2,19 @@
   SOCIAL LIST
 */
 .social-list {
-  padding: 10px;
+  padding: 0;
+  margin: 0;
   list-style: none;
+  display: inline-block;
   text-align: center;
 }
 
 .social-list--item {
   display: inline-block;
   padding: 5px;
+  color: black;
 }
 
-.social-list--facebook .social-list--icon { color: #3b5998; }
-.social-list--twitter .social-list--icon { color: #55acee; }
-.social-list--linkedin .social-list--icon { color: #007bb5; }
+.social-list--icon {
+  color: white;
+}
