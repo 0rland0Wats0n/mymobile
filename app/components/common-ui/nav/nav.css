@@ -1,0 +1,20 @@
+.mymobile-nav {
+  padding: 10px;
+}
+
+.mymobile-nav--menu {
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.mymobile-nav--menu .fa {
+  cursor: pointer;
+}
+
+.mymobile-nav--logo {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  max-width: 100%;
+}
