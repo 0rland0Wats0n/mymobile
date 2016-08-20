@@ -1,9 +1,11 @@
+require('./navigation.css');
+
 import React from 'react';
 
 export default () => {
   return (
-    <div className="navigation-bar">
-      
+    <div className="mymobile-nav">
+
     </div>
   )
 }
