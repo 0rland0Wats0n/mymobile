@@ -1,20 +1,18 @@
 .mymobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 95px;
   padding: 10px;
-}
-
-.mymobile-nav--menu {
-  display: block;
-  margin: 10px auto;
   text-align: center;
-}
-
-.mymobile-nav--menu .fa {
-  cursor: pointer;
+  z-index: 2000;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .mymobile-nav--logo {
   display: block;
   margin: 0 auto;
-  width: 150px;
+  width: 95px;
   max-width: 100%;
 }

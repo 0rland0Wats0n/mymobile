@@ -18,6 +18,10 @@ a:visited {
   color: currentColor;
 }
 
+.mymobile-inline-anchor {
+  display: inline-block;
+}
+
 .ptc-container {
   width: 100%;
   padding: 20px;
