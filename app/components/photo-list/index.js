@@ -43,6 +43,7 @@ class PhotoList extends Component {
         return (
           <div className="grid-item mymobile-photo-list--image-container" key={image._id}>
             <Link to={`/image/${image._id}`}>
+              <p className="mymobile-photo-list--view-cta">View</p>
               <img className="mymobile-photo-list--image" src={image.image.url} onLoad={this.handleImageLoaded}/>
             </Link>
           </div>
