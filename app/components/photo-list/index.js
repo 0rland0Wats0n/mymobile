@@ -4,20 +4,31 @@ import _ from 'underscore';
 import $ from 'jquery';
 
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 import { connect } from 'react-redux';
 
 import { getImages } from '../../actions/index';
 
 class PhotoList extends Component {
+  initializeIsotope() {
+    imagesLoaded($('.grid'), function() {
+       const $grid =  new Isotope('.grid', {
+        itemSelector: '.grid-item',
+        percentPosition: true,
+        packery: {
+          columnWidth: 10
+        }
+      });
+    });
+  }
   componentWillMount() {
     this.props.getImages();
   };
   componentDidMount() {
-    imagesLoaded($('.grid'), function() {
-      this.$grid =  new Isotope('.grid', {
-        itemSelector: '.grid-item'
-      });
-    });
+    this.initializeIsotope();
+  }
+  handleImageLoaded = () => {
+    this.initializeIsotope();
   }
   render() {
     return (
@@ -30,8 +41,10 @@ class PhotoList extends Component {
     if(!_.isEmpty(this.props.images)) {
       return this.props.images.images.map((image) => {
         return (
-          <div className="grid-item" key={image._id}>
-            <img className="mymobile-photo-list--image" src={image.image.url}/>
+          <div className="grid-item mymobile-photo-list--image-container" key={image._id}>
+            <Link to={`/image/${image._id}`}>
+              <img className="mymobile-photo-list--image" src={image.image.url} onLoad={this.handleImageLoaded}/>
+            </Link>
           </div>
         )
       });
