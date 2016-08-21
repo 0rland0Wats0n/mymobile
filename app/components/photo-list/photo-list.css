@@ -42,6 +42,11 @@
 .mymobile-photo-list--image {
   width: 100%;
   position: relative;
+  transition: all 0.3s ease-out;
+}
+
+.mymobile-photo-list--image-container:hover .mymobile-photo-list--image {
+  transform: scale(0.9);
 }
 
 .grid-item {
