@@ -15,14 +15,20 @@ class Photo extends Component {
     this.props.getImage(this.props.params.id);
   };
   render() {
-    return (
-      <div>
-        <Header data={ { description: 'this is just a placeholder.'} } />
-        <div className="mymobile-photo--container">
-          {this.renderImage()}
+    if(this.props.image) {
+      return (
+        <div>
+          <Header data={this.props.image} />
+          <div className="mymobile-photo--container">
+            {this.renderImage()}
+          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
+      )
+    }
+
+    return (
+      <div>Loading...</div>
     )
   };
   renderImage = () => {
