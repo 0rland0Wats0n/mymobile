@@ -20,7 +20,7 @@ var config = {
       test: /\.js$/,
       loader: 'babel-loader',
       query: {
-        presets: ['react', 'es2015', 'stage-1']
+        presets: ['react', 'es2015', 'stage-0']
       },
       exclude: [nodeModulesPath]
     },
