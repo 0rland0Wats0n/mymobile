@@ -21,3 +21,21 @@ a:visited {
 .mymobile-inline-anchor {
   display: inline-block;
 }
+
+.mymobile-photo--image.is-hidden {
+  transform: scale(0);
+}
+
+.mymobile-photo--image {
+  transform: scale(1);
+  transition: all 0.3s ease-out;
+}
+
+.mymobile-appear {
+  opacity: 0.01;
+}
+
+.mymobile-appear.mymobile-appear-active {
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}

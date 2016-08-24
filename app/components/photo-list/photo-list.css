@@ -15,22 +15,38 @@
           filter: grayscale(100%);
 }
 
-.mymobile-photo-list--image:hover::after {
-  content: 'View';
+.mymobile-photo-list--image-container:hover .mymobile-photo-list--view-cta {
+  opacity: 1;
+}
+
+.mymobile-photo-list--view-cta {
   position: absolute;
-  height: 20px;
-  top: 0;
-  bottom: 0;
+  z-index: 2000;
+  display: inline-block;
   left: 0;
   right: 0;
+  margin: auto;
+  text-align: center;
+  max-width: 100px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 50%;
+  transform: translateY(-50%);
   color: white;
-  font-size: 1.5em;
   text-transform: uppercase;
+  font-size: 1.5em;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
 }
 
 .mymobile-photo-list--image {
   width: 100%;
   position: relative;
+  transition: all 0.3s ease-out;
+}
+
+.mymobile-photo-list--image-container:hover .mymobile-photo-list--image {
+  transform: scale(0.9);
 }
 
 .grid-item {
@@ -53,5 +69,23 @@
 @media all and (min-width: 992px) {
   .grid-item {
     width: 25%;
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .grid-item {
+    width: 20%;
+  }
+}
+
+@media all and (min-width: 1920px) {
+  .grid-item {
+    width: 16.66%;
+  }
+}
+
+@media all and (min-width: 2560px) {
+  .grid-item {
+    width: 14.27%;
   }
 }
