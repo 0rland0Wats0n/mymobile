@@ -7,22 +7,17 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import Footer from '../common-ui/footer/index';
+import Header from '../photo-header/index';
 import { getImage } from '../../actions/index';
 
 class Photo extends Component {
   componentWillMount() {
     this.props.getImage(this.props.params.id);
   };
-  componentDidMount() {
-    window.addEventListener('resize', this.handleWindowResize);
-  }
-  componentWillUnount() {
-    window.removeEventListener('resize', this.handleWindowResize);
-    $('.mymobile-photo--image').addClass('is-hidden');
-  }
   render() {
     return (
       <div>
+        <Header data={ { description: 'this is just a placeholder.'} } />
         <div className="mymobile-photo--container">
           {this.renderImage()}
         </div>
@@ -46,7 +41,6 @@ class Photo extends Component {
     )
   };
   handleImageLoad = () => {
-    this.handleWindowResize()
     $('.mymobile-photo--image').removeClass('is-hidden');
   };
   handleWindowResize = () => {
