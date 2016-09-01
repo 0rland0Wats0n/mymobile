@@ -16,7 +16,7 @@ class Login extends Component {
   };
 
   componentWillMount() {
-    console.log(cookie.load('xt'));
+    console.log(localStorage.getItem('xt'));
   }
   handleLogin = (props) => {
     this.props.login(props)
@@ -26,7 +26,7 @@ class Login extends Component {
           return;
         }
 
-        cookie.save('xt', data.payload.data.token, { expires: new Date(new Date().getTime() + (24*60*60*1000)) });
+        localStorage.setItem('xt', data.payload.data.token);
         this.context.router.push('/');
       });
   }
