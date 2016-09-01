@@ -3,8 +3,17 @@
 */
 footer {
   color: white;
-  padding: 20px;
   width: 100%;
-  min-height: 400px;
-  background-color: #0d0d0d;
+  min-height: 40px;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  padding: 5px;
+}
+
+.mymobile-footer-details {
+  color: black;
+  margin: 0;
+  font-weight: lighter;
 }

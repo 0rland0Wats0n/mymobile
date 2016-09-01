@@ -1,0 +1,91 @@
+.mymobile-photo-list {
+  position: relative;
+  padding: 10px 0;
+  margin: 95px 0 45px;;
+  max-width: 100%;
+}
+
+.mymobile-photo-list--image-container {
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.mymobile-photo-list--image-container:hover {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.mymobile-photo-list--image-container:hover .mymobile-photo-list--view-cta {
+  opacity: 1;
+}
+
+.mymobile-photo-list--view-cta {
+  position: absolute;
+  z-index: 2000;
+  display: inline-block;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  max-width: 100px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.mymobile-photo-list--image {
+  width: 100%;
+  position: relative;
+  transition: all 0.3s ease-out;
+}
+
+.mymobile-photo-list--image-container:hover .mymobile-photo-list--image {
+  transform: scale(0.9);
+}
+
+.grid-item {
+  width: 100%;
+  padding: 10px;
+}
+
+@media all and (min-width: 600px) {
+  .grid-item {
+    width: 50%;
+  }
+}
+
+@media all and (min-width: 800px) {
+  .grid-item {
+    width: 33.33%;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .grid-item {
+    width: 25%;
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .grid-item {
+    width: 20%;
+  }
+}
+
+@media all and (min-width: 1920px) {
+  .grid-item {
+    width: 16.66%;
+  }
+}
+
+@media all and (min-width: 2560px) {
+  .grid-item {
+    width: 14.27%;
+  }
+}
