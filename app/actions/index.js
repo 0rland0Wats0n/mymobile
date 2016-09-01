@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const GET_IMAGES = 'GET_IMAGES';
 
-const ROOT_URL = process.env.ROOT_URL || 'http://localhost:4242';
+const ROOT_URL = process.env.ROOT_URL;
 
 export function getImages() {
   const request = axios.get(`${ROOT_URL}/api/images`);

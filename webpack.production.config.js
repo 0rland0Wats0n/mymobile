@@ -36,7 +36,8 @@ var config = {
   plugins: [
     new Webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+        ROOT_URL: JSON.stringify(process.env.ROOT_URL) || 'http://localhost:4242'
       }
     }),
     new ExtractTextPlugin('style.css', {
