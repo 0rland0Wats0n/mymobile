@@ -32,13 +32,17 @@ class PhotoList extends Component {
 
     $('.mymobile-photo--image').removeClass('is-hidden');
   }
+  createImageUrl(image) {
+    let url = `#{image.url.split('upload')[0]}/upload`;
+    console.log(url);
+  }
   render() {
     return (
       <div className="mymobile-photo-list grid">
         {this.renderImages()}
       </div>
     )
-  };
+  }
   renderImages = () => {
     if(!_.isEmpty(this.props.images)) {
       return this.props.images.images.map((image) => {
@@ -46,7 +50,9 @@ class PhotoList extends Component {
           <div className="grid-item mymobile-photo-list--image-container" key={image._id}>
             <Link to={`/image/${image._id}`}>
               <p className="mymobile-photo-list--view-cta">View</p>
-              <img className="mymobile-photo-list--image mymobile-photo--image is-hidden" src={image.image.url} onLoad={this.handleImageLoaded}/>
+              <img className="mymobile-photo-list--image mymobile-photo--image is-hidden"
+                  src={this.createImageUrl(image)}
+                  onLoad={this.handleImageLoaded}/>
             </Link>
           </div>
         )
