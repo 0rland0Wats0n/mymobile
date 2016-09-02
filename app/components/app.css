@@ -48,3 +48,8 @@ a:visited {
 .mymobile-loading.is-loaded {
   transform: scale(0);
 }
+
+.mymobile-loading--loading-gif {
+  width: 150px;
+  max-width: 100%;
+}

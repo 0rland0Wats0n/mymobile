@@ -41,7 +41,7 @@ class PhotoList extends Component {
     return (
       <div>
         <div className="mymobile-loading">
-          <img src="/images/loading.gif" />
+          <img className="mymobile-loading--loading-gif" src="/images/loading.gif" />
         </div>
         <div className="mymobile-photo-list grid">
           {this.renderImages()}
