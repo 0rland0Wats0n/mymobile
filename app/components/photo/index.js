@@ -14,6 +14,9 @@ class Photo extends Component {
   componentWillMount() {
     this.props.getImage(this.props.params.id);
   };
+  createImageUrl(image) {
+    return `${image.url.split('upload')[0]}upload/q_50,f_auto/v${image.version}/${image.public_id}.${image.format}`;
+  };
   render() {
     if(this.props.image) {
       return (
@@ -37,7 +40,7 @@ class Photo extends Component {
     if(!_.isEmpty(image)) {
       return (
         <div className="mymobile-photo--image-container">
-          <img className="mymobile-photo--image is-hidden" src={image.image.image.url} onLoad={this.handleImageLoad} />
+          <img className="mymobile-photo--image is-hidden" src={this.createImageUrl(image.image.image)} onLoad={this.handleImageLoad} />
         </div>
       )
     }

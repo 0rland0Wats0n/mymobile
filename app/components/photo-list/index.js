@@ -33,7 +33,7 @@ class PhotoList extends Component {
     $('.mymobile-photo--image').removeClass('is-hidden');
   }
   createImageUrl(image) {
-    return `${image.url.split('upload')[0]}upload/q_40/v${image.version}/${image.public_id}.${image.format}`;
+    return `${image.url.split('upload')[0]}upload/q_10,f_auto/v${image.version}/${image.public_id}.${image.format}`;
   }
   render() {
     return (
