@@ -19,6 +19,8 @@ class PhotoList extends Component {
           columnWidth: 10
         }
       });
+
+      $('.mymobile-loading').addClass('is-loaded');
     });
   }
   componentWillMount() {
@@ -37,8 +39,13 @@ class PhotoList extends Component {
   }
   render() {
     return (
-      <div className="mymobile-photo-list grid">
-        {this.renderImages()}
+      <div>
+        <div className="mymobile-loading">
+          <img className="mymobile-loading--loading-gif" src="/images/loading.gif" />
+        </div>
+        <div className="mymobile-photo-list grid">
+          {this.renderImages()}
+        </div>
       </div>
     )
   }

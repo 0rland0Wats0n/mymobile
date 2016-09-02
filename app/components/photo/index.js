@@ -22,6 +22,9 @@ class Photo extends Component {
       return (
         <div>
           <Header data={this.props.image} />
+          <div className="mymobile-loading">
+            <img src="/images/loading.gif" />
+          </div>
           <div className="mymobile-photo--container">
             {this.renderImage()}
           </div>
@@ -31,7 +34,9 @@ class Photo extends Component {
     }
 
     return (
-      <div>Loading...</div>
+      <div className="mymobile-loading">
+        <img src="/images/loading.gif" />
+      </div>
     )
   };
   renderImage = () => {
@@ -51,6 +56,7 @@ class Photo extends Component {
   };
   handleImageLoad = () => {
     $('.mymobile-photo--image').removeClass('is-hidden');
+    $('.mymobile-loading').addClass('is-loaded');
   };
   handleWindowResize = () => {
     const height = $(window).height();
