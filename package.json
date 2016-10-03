@@ -1,7 +1,7 @@
 {
-  "name": "passport-to-college",
+  "name": "mymobile",
   "version": "1.0.0",
-  "description": "React-based passport to college website.",
+  "description": "React-based mymobile website.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
